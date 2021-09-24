@@ -51,7 +51,7 @@ article h1 {
     color: #303030;
     text-shadow: 2px 2px 5px black;
     font-family: 'AXIS', sans-serif;
-    margin: 0;
+    margin: 0 3rem;
 }
 
 article p {
@@ -61,4 +61,132 @@ article p {
     color: white;
     padding: 2rem;
     box-shadow: 3px 3px black;
+}
+
+.lang {
+    width: 75%;
+    text-align: center;
+}
+
+.lang ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lang li {
+    margin: 2rem;
+}
+
+/*Code Viewer*/
+
+#code-box {
+    text-align: center;
+    border: 2px solid #303030;
+    display: grid;
+    grid-template: 15% 1fr 10% / 1fr;  
+}
+
+#code-title {
+    background-color: #303030;
+    padding: .5rem 0;
+    color: #dfdfdf;
+    text-shadow: 2px 2px black;
+    font-size: 2rem;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#code-options {
+    border-top: 2px solid #303030;
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#code-viewer {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 710px;
+}
+
+object {
+    width: 100%;
+    height: 43rem;
+}
+
+#code-options ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: #303030;
+    margin: 0;
+    padding: 1rem;
+}
+
+#code-options li {
+    list-style: none;
+    margin: 1rem;
+}
+
+#code-options button {
+    border: none;
+    color: white;
+    background-color: #303030;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px black;
+}
+
+#img-button {
+    text-decoration: underline #4266a1;
+}
+
+.page {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#code-viewer img {
+    max-height: 700px;
+  }
+
+/* More Projects */
+table {
+    border: 2px solid #303030;
+    border-collapse: collapse;
+    width: 75%;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+th, td {
+    border: 2px solid #303030;
+    padding: 1rem;
+    text-align: center;
+}
+
+td button {
+    border: none;
+    background-color: rgba(0,0,0,0) ;
+    text-decoration: underline;
+    color: #4266a1;
+}
+
+thead, tfoot {
+    background-color: #303030;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+tfoot {
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #bcbebc;
+  }
+   
+.project {
+    text-decoration: underline;
+    color: #4266a1;
 }

@@ -1,20 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../CSS/App.css';
 import logo from '../Utility/Images/logo.png';
 
 
 
 const Nav = (props) => {
+
+    
+    const renderNav = () => {
+        let nav = props.mainArticles.map( 
+            article => <li key={article.value}><button id={article.value} onClick={handleClick} value={article.value} >{article.name}</button></li>
+        )
+        return nav;
+    }
+
+    const handleClick = ({target}) => {
+        props.handleProjectChange(target.value);
+    }
+
+     useEffect(()=>{
+         let id = props.project.section === 'more' ? 'more' : props.project.value;
+         let selected = document.getElementById(id);
+         if(!selected){return}
+         selected.style.textDecoration = 'underline #4266a1';
+         return ()=>{
+             selected.style.textDecoration = 'none';
+         }
+     })
+
     return(
         <div className='nav box'>
             <img src={logo} alt="Portfolio by: Max Houston" />
             <nav>
                 <ul>
-                    <li><button id="about-button" >About Me</button></li>
-                    <li><button id="game-button" >Game Of War</button></li>
-                    <li><button id="island-button" >Island Golf</button></li>
-                    <li><button id="portfolio-button" >Portfolio Site</button></li>
-                    <li><button id="more-button" >More Projects</button></li>
+                    {renderNav()}
                 </ul>
             </nav>
         </div>

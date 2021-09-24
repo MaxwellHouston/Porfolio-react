@@ -4,6 +4,7 @@ import '../CSS/App.css';
 
 const Article = (props) => {
     const project = props.project;
+    
     return project.article;    
 }
 
